@@ -79,7 +79,7 @@ class MessageHandler(RequestHandlerPlus):
     lat = str(post.lat)
     lon = str(post.lon)
     dateTime = formatLocalFromUtc(post.datetime, profile.tz)
-    key = settings.MAPS_KEY
+    key = settings.MAP_KEY
 
     self.render('message.html', self.getContext(locals()))
 
