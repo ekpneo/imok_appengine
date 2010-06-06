@@ -51,6 +51,10 @@ handlers:
   script: debug.py
   login: admin
 
+- url: /data/.*
+  script: browsedata.py
+  login: admin
+
 - url: /export.*
   script: export.py
   login: admin
