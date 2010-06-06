@@ -49,7 +49,8 @@ class MapHandler(RequestHandlerPlus):
                        )
         features.append(feature)
     featureText = simplejson.dumps(features)
-    self.render('map.html', self.getContext(dict(features=featureText)))
+    self.render('map.html', self.getContext(dict(features=featureText,
+                                                 key=settings.MAP_KEY)))
     
 def main():
   application = webapp.WSGIApplication([
